@@ -38,6 +38,10 @@ RUN apk --update add \
     python3 \
     tar \
     unzip \
+    && pip install --upgrade \
+    pip \
+    setuptools \
+    virtualenv
     && cd /tmp \
     && apk add --update --repository ${ALPINE_EDGE_COMMUNITY_REPO} tini \
     && wget -q -O /etc/apk/keys/andyshinn.rsa.pub "${ANDY_SHINN_RSA_PUB_URL}" \
