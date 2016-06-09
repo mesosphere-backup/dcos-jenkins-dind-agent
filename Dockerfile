@@ -5,11 +5,11 @@ MAINTAINER Mesosphere Support <support+jenkins-dind@mesosphere.com>
 # http://bugs.python.org/issue19846
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
 ENV ALPINE_EDGE_COMMUNITY_REPO=http://dl-cdn.alpinelinux.org/alpine/edge/community \
-    ALPINE_GLIBC_BASE_URL=https://github.com/andyshinn/alpine-pkg-glibc/releases/download/unreleased \
-    ALPINE_GLIBC_PACKAGE=glibc-2.23-r1.apk \
-    ALPINE_GLIBC_BIN_PACKAGE=glibc-bin-2.23-r1.apk \
-    ALPINE_GLIBC_I18N_PACKAGE=glibc-i18n-2.23-r1.apk \
-    ANDY_SHINN_RSA_PUB_URL=https://raw.githubusercontent.com/andyshinn/alpine-pkg-glibc/master/andyshinn.rsa.pub \
+    ALPINE_GLIBC_BASE_URL=https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.23-r2/ \
+    ALPINE_GLIBC_PACKAGE=glibc-2.23-r2.apk \
+    ALPINE_GLIBC_BIN_PACKAGE=glibc-bin-2.23-r2.apk \
+    ALPINE_GLIBC_I18N_PACKAGE=glibc-i18n-2.23-r2.apk \
+    SGERRAND_RSA_PUB_URL=https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub \
     JAVA_HOME=/usr/lib/jvm/default-jvm \
     LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8 \
@@ -44,7 +44,7 @@ RUN apk --update add \
     virtualenv
     && cd /tmp \
     && apk add --update --repository ${ALPINE_EDGE_COMMUNITY_REPO} tini \
-    && wget -q -O /etc/apk/keys/andyshinn.rsa.pub "${ANDY_SHINN_RSA_PUB_URL}" \
+    && wget -q -O /etc/apk/keys/sgerrand.rsa.pub "${SGERRAND_RSA_PUB_URL}" \
     && wget -q "${ALPINE_GLIBC_BASE_URL}/${ALPINE_GLIBC_PACKAGE}" \
                "${ALPINE_GLIBC_BASE_URL}/${ALPINE_GLIBC_BIN_PACKAGE}" \
                "${ALPINE_GLIBC_BASE_URL}/${ALPINE_GLIBC_I18N_PACKAGE}" \
