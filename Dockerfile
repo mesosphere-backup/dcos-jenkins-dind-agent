@@ -48,7 +48,7 @@ RUN apk --update add \
     && wget -q "${ALPINE_GLIBC_BASE_URL}/${ALPINE_GLIBC_PACKAGE}" \
                "${ALPINE_GLIBC_BASE_URL}/${ALPINE_GLIBC_BIN_PACKAGE}" \
                "${ALPINE_GLIBC_BASE_URL}/${ALPINE_GLIBC_I18N_PACKAGE}" \
-    && apk add ${ALPINE_GLIBC_PACKAGE} ${ALPINE_GLIBC_BIN_PACKAGE} ${ALPINE_GLIBC_I18N_PACKAGE} \
+    && apk add --allow-untrusted ${ALPINE_GLIBC_PACKAGE} ${ALPINE_GLIBC_BIN_PACKAGE} ${ALPINE_GLIBC_I18N_PACKAGE} \
     && cd \
     && rm -rf /tmp/* /var/cache/apk/* \
     && /usr/glibc-compat/bin/localedef -i en_US -f UTF-8 en_US.UTF-8 \
