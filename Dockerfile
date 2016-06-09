@@ -41,7 +41,7 @@ RUN apk --update add \
     && pip install --upgrade \
     pip \
     setuptools \
-    virtualenv
+    virtualenv \
     && cd /tmp \
     && apk add --update --repository ${ALPINE_EDGE_COMMUNITY_REPO} tini \
     && wget -q -O /etc/apk/keys/sgerrand.rsa.pub "${SGERRAND_RSA_PUB_URL}" \
