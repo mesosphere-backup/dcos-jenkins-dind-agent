@@ -2,7 +2,7 @@
 [![Docker Stars](https://img.shields.io/docker/stars/mesosphere/jenkins-dind.svg)][docker-hub]
 [![Docker Pulls](https://img.shields.io/docker/pulls/mesosphere/jenkins-dind.svg)][docker-hub]
 [![](https://images.microbadger.com/badges/image/mesosphere/jenkins-dind.svg)](http://microbadger.com/images/mesosphere/jenkins-dind "Get your own image badge on microbadger.com")
-
+ 
 A simple Docker image for running a Jenkins agent alongside its very
 own Docker daemon. This is useful if you're trying to run Jenkins agents on a
 Mesos cluster, and you also want to build and push Docker images using your
