@@ -19,7 +19,7 @@ RUN apt-get update -y       \
        unzip                \
        zip
 
-ENV DIND_COMMIT 60ccb2265b0574d6c1c1090876a1d1ab32bed60e
+ENV DIND_COMMIT 092cba3727bb9b4a2f0e922cd6c0f93ea270e363
 # docker
 RUN curl -sSL https://get.docker.com | sh
 # fetch DIND script
