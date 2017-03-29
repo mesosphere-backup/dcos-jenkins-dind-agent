@@ -16,7 +16,7 @@ For full documentation on how to use this Docker image, please refer to
 Try it out locally by running the following command:
 
 ```bash
-docker run --privileged mesosphere/jenkins-dind:0.3.1 \
+docker run --privileged mesosphere/jenkins-dind:0.5.0-alpine \
   wrapper.sh "java -version && docker run hello-world"
 ```
 
@@ -41,7 +41,7 @@ Mesos plugin within the Jenkins master's `config.xml` follows:
   <jnlpArgs/>
   <containerInfo>
     <type>DOCKER</type>
-    <dockerImage>mesosphere/jenkins-dind:0.3.1</dockerImage>
+    <dockerImage>mesosphere/jenkins-dind:0.5.0-alpine</dockerImage>
     <networking>BRIDGE</networking>
     <useCustomDockerCommandShell>true</useCustomDockerCommandShell>
     <customDockerCommandShell>wrapper.sh</customDockerCommandShell>
