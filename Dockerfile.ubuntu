@@ -19,7 +19,9 @@ RUN apt-get update -y       \
        unzip                \
        zip
 
-ENV DIND_COMMIT 092cba3727bb9b4a2f0e922cd6c0f93ea270e363
+# links to commit hashes are listed inside posted Dockerfiles https://hub.docker.com/r/library/docker/
+# NOTE: must match engine version that is directly pulled from Alpine's Dockerfile
+ENV DIND_COMMIT 3b5fac462d21ca164b3778647420016315289034
 # docker
 RUN curl -sSL https://get.docker.com | sh
 # fetch DIND script
