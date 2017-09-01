@@ -1,4 +1,4 @@
-FROM docker:1.13.1-dind
+FROM docker:17.06.1-dind
 
 MAINTAINER Mesosphere Support <support+jenkins-dind@mesosphere.com>
 
@@ -32,6 +32,7 @@ RUN apk --update add \
     make \
     openjdk8 \
     openssh-client \
+    openssl \
     perl \
     py-pip \
     python \
