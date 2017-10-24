@@ -41,7 +41,7 @@ Mesos plugin within the Jenkins master's `config.xml` follows:
   <jnlpArgs/>
   <containerInfo>
     <type>DOCKER</type>
-    <dockerImage>mesosphere/jenkins-dind:0.5.0-alpine</dockerImage>
+    <dockerImage>mesosphere/jenkins-dind:0.6.0-alpine</dockerImage>
     <networking>BRIDGE</networking>
     <useCustomDockerCommandShell>true</useCustomDockerCommandShell>
     <customDockerCommandShell>wrapper.sh</customDockerCommandShell>
