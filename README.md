@@ -16,7 +16,7 @@ For full documentation on how to use this Docker image, please refer to
 Try it out locally by running the following command:
 
 ```bash
-docker run --privileged mesosphere/jenkins-dind:0.5.0-alpine \
+docker run --privileged mesosphere/jenkins-dind:0.6.0-alpine \
   wrapper.sh "java -version && docker run hello-world"
 ```
 
