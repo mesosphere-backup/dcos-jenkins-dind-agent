@@ -1,6 +1,10 @@
 FROM ubuntu:16.04
+ARG docker_ver=17.12.0
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+# links to commit hashes are listed inside posted Dockerfiles https://hub.docker.com/r/library/docker/
+# NOTE: must match engine version that is directly pulled from Alpine's Dockerfile
+ENV DIND_COMMIT 3b5fac462d21ca164b3778647420016315289034
 
 RUN apt-get update -y       \
     && apt-get upgrade -y   \
@@ -19,11 +23,11 @@ RUN apt-get update -y       \
        unzip                \
        zip
 
-# links to commit hashes are listed inside posted Dockerfiles https://hub.docker.com/r/library/docker/
-# NOTE: must match engine version that is directly pulled from Alpine's Dockerfile
-ENV DIND_COMMIT 3b5fac462d21ca164b3778647420016315289034
 # docker
-RUN curl -sSL https://get.docker.com | sh
+RUN curl -fsSL "https://download.docker.com/linux/ubuntu/gpg" | apt-key add -qq - \
+    && echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable" > /etc/apt/sources.list.d/docker.list \
+    && apt-get update -qq \
+    && apt-get install -y -qq --no-install-recommends docker-ce="${docker_ver}~ce-0~ubuntu"
 # fetch DIND script
 RUN curl -sSL https://raw.githubusercontent.com/docker/docker/${DIND_COMMIT}/hack/dind -o /usr/local/bin/dind \
     && chmod a+x /usr/local/bin/dind
