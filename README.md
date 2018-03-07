@@ -9,7 +9,7 @@ Mesos cluster, and you also want to build and push Docker images using your
 CI system.
 
 For full documentation on how to use this Docker image, please refer to
-<https://docs.mesosphere.com/latest/usage/service-guides/jenkins/>.
+<https://docs.mesosphere.com/services/jenkins/custom-docker/>.
 
 ## Usage
 ### Command line
