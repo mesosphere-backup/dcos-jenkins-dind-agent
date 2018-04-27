@@ -1,4 +1,4 @@
-FROM docker:17.12.0-dind
+FROM docker:17.12.1-dind
 
 MAINTAINER Mesosphere Support <support+jenkins-dind@mesosphere.com>
 
