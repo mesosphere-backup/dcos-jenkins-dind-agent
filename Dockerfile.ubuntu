@@ -39,6 +39,5 @@ RUN curl -sSL https://raw.githubusercontent.com/docker/docker/${DIND_COMMIT}/hac
 COPY ./wrapper.sh /usr/local/bin/wrapper.sh
 RUN chmod a+x /usr/local/bin/wrapper.sh
 
-VOLUME /var/lib/docker
 ENTRYPOINT []
 CMD []
