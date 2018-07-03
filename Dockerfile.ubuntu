@@ -1,5 +1,5 @@
 FROM ubuntu:17.10
-ARG docker_ver=17.12.1
+ARG docker_ver=18.03.1
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 # links to commit hashes are listed inside posted Dockerfiles https://hub.docker.com/r/library/docker/
@@ -8,7 +8,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 # - click on the matching alpine version tag (eg, 17.12.0-dind)
 # - pull the DIND_COMMIT has from the Dockerfile that opens, for 17.12.0-dind it will be:
 #   https://github.com/docker-library/docker/blob/de9fda490429cf83734ef78b58f0ae9cfed1b087/17.12/dind/Dockerfile
-ENV DIND_COMMIT 3b5fac462d21ca164b3778647420016315289034
+ENV DIND_COMMIT 52379fa76dee07ca038624d639d9e14f4fb719ff
 
 RUN apt-get update -y       \
     && apt-get upgrade -y   \
