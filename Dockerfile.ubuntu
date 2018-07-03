@@ -1,5 +1,5 @@
 FROM ubuntu:17.10
-ARG docker_ver=17.12.1
+ARG docker_ver=17.09.1
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 # links to commit hashes are listed inside posted Dockerfiles https://hub.docker.com/r/library/docker/
