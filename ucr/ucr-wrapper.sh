@@ -12,11 +12,9 @@ DOCKER_ARGS+=(
 # Make Docker observe the configured limit on the amount of container logs to keep.
 DOCKER_ARGS+=(
     --log-driver=json-file
-    --log-opt=max-size={{KUBERNETES_CONTAINER_LOGS_MAX_SIZE}}m
+    --log-opt=max-size=5
     --log-opt=max-file=1
 )
-
-
 
 printf "Starting docker...\n"
 
@@ -29,3 +27,4 @@ mkdir -p /var/lib/docker
 mount --bind var /var/lib/docker
 
 dockerd ${DOCKER_ARGS[@]} &
+
