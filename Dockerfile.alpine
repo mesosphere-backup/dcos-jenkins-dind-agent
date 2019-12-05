@@ -30,6 +30,7 @@ RUN apk --update add \
     libsm \
     libstdc++ \
     make \
+    nss \
     openjdk8 \
     openssh-client \
     openssl \
