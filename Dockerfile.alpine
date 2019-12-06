@@ -1,4 +1,4 @@
-FROM docker:17.12.1-dind
+FROM docker:19.03.5-dind
 
 MAINTAINER Mesosphere Support <support+jenkins-dind@mesosphere.com>
 
@@ -25,11 +25,13 @@ RUN apk --update add \
     ca-certificates \
     git \
     glib \
+    gcc \
     jq \
     less \
     libsm \
     libstdc++ \
     make \
+    musl-dev \
     openjdk8 \
     openssh-client \
     openssl \
@@ -38,6 +40,7 @@ RUN apk --update add \
     python \
     python3 \
     tar \
+    rpm \
     unzip \
     && cd /tmp \
     && pip install --upgrade \
