@@ -3,8 +3,6 @@
 * This repository has moved as a sub-directory within the [dcos-jenkins-service](https://github.com/mesosphere/dcos-jenkins-service/tree/4.x.y/jenkins-agent-images/linux/dcos-jenkins-dind-agent) repository.
 * The current repository will be archived, but can be forked and modified as necessary. All released images remain unchanged.
 
---
-
 # Jenkins Docker-in-Docker Agent
 [![Docker Stars](https://img.shields.io/docker/stars/mesosphere/jenkins-dind.svg)][docker-hub]
 [![Docker Pulls](https://img.shields.io/docker/pulls/mesosphere/jenkins-dind.svg)][docker-hub]
